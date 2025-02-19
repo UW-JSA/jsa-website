@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState, useMemo } from "react";
-import { SupportedLanguage } from "./types";
+import { SupportedLanguage } from "@/interfaces/SupportedLanguage";
 
 type ThemeContextType = {
   language: SupportedLanguage;

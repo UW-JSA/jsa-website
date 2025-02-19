@@ -37,7 +37,7 @@ export default function EventCards() {
               ${activeTab === 1 ? "bg-white" : "bg-transparent border-transparent"}
             `}
           >
-            {language === "en" ? "Achieved" : "終了済み"}
+            {language === "en" ? "Complete" : "終了済み"}
           </li>
         </ul>
 

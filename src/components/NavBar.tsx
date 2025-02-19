@@ -16,7 +16,7 @@ import { DM_Sans } from "next/font/google";
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export default function NavBar() {
@@ -30,12 +30,20 @@ export default function NavBar() {
     <div> 
       <AppBar position="fixed" style={{ backgroundColor: "var(--background)" }} className={`${dmSans.className} antialiased`}>
       <Toolbar className="flex justify-between items-center">
-        <Link href="/" className="flex items-center no-underline">
+        <div className="flex flex-row items-center gap-3">
+          <Link href="/" className="flex items-center no-underline">
           <Typography variant="h6" className="flex items-center text-gray-900">
             <Image src="/logo.webp" alt="logo" width={50} height={50} />
               <span className="ml-2 font-bold">{content[language].shorttitle}</span>
           </Typography>
         </Link>
+        <Link href="/team" className="flex items-center no-underline">
+          <Typography variant="h6" className="flex items-center text-gray-900">
+              <span className="ml-2 text-sm">Team</span>
+          </Typography>
+        </Link>
+        </div>
+        
         <Box
           className={`flex items-center gap-3 rounded-full px-4 py-1 transition-colors duration-300 ${
             trigger

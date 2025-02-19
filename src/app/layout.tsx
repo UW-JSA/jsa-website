@@ -5,17 +5,24 @@ import ScrollTop from "@/components/ScrollTop";
 import "./globals.css";
 import { Fab, Toolbar } from "@mui/material";
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import { DM_Sans } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "JSA website",
-  description: "Officiel Website for Japanese Student Association",
+  title: "University of Waterloo Japanese Student Association",
+  description: "Official Website for Japanese Student Association",
 };
+
+const dmSans = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+});
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html>
-      <body>
-        <ThemeProvider>
+      <body className={`${dmSans.className} antialiased`}>
+      <ThemeProvider>
           <NavBar />
           <Toolbar id="back-to-top-anchor" />
           {children}

@@ -16,7 +16,7 @@ const content: Record<SupportedLanguage, Content> = {
     en: {
         language: 'English',
         title: 'UWaterloo Japanese Student Assoc.',
-        description: 'something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something something'
+        description: 'Official Website for the University of Waterloo Japanese Student Association'
     }
 };
 

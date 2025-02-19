@@ -15,8 +15,8 @@ export default function NavBar() {
   });
 
   return (
-    <AppBar position="fixed" className="bg-transparent shadow-none">
-      <Toolbar className="flex justify-between items-center p-1">
+    <AppBar position="fixed" color="transparent" className="bg-transparent shadow-none">
+      <Toolbar className="flex justify-between items-center">
         <Link href="/" className="flex items-center no-underline">
           <Typography variant="h6" className="flex items-center text-gray-900">
             <Image src="/logo.webp" alt="logo" width={50} height={50} />

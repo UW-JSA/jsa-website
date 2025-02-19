@@ -27,7 +27,19 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <Toolbar id="back-to-top-anchor" />
           {children}
           <ScrollTop>
-            <Fab size="small" aria-label="scroll back to top">
+            <Fab
+              size="small"
+              aria-label="scroll back to top"
+              sx={{
+                backgroundColor: 'transparent',
+                border: '1px solid black',
+                color: 'black',
+                transition: 'background-color 0.3s, color 0.3s',
+                '&:hover': {
+                  backgroundColor: 'white',
+                },
+              }}
+            >
               <KeyboardArrowUpIcon />
             </Fab>
           </ScrollTop>

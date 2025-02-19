@@ -1,5 +1,4 @@
-
-import { SupportedLanguage } from "./types";
+import { SupportedLanguage } from "@/interfaces/supportedLanguage";
 
 type Content = {
   language: string;
@@ -13,7 +12,7 @@ const content: Record<SupportedLanguage, Content> = {
         language: '日本語',
         shorttitle: 'UWJSA',
         title: 'ウォータールー大学公式日本学生協会',
-        description: 'なんとかかんとかなんとかかんとかなんとかかんとかなんとかかんとかなんとかかんとかなんとかかんとかなんとかかんとかなんとかかんとかなんとかかんとかなんとかかんとかなんとかかんとかなんとかかんとかなんとかかんとかなんとかかんとかなんとかかんとかなんとかかんとか...'
+        description: 'ウォータールー大学日本人学生会公式サイト'
     },
     en: {
         language: 'English',

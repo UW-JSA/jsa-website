@@ -27,12 +27,13 @@ export default function NavBar() {
   });
 
   return (
-    <AppBar position="fixed" color="transparent" className={`${dmSans.className} antialiased bg-transparent shadow-none`}>
+    <div> 
+      <AppBar position="fixed" style={{ backgroundColor: "var(--background)" }} className={`${dmSans.className} antialiased`}>
       <Toolbar className="flex justify-between items-center">
         <Link href="/" className="flex items-center no-underline">
           <Typography variant="h6" className="flex items-center text-gray-900">
             <Image src="/logo.webp" alt="logo" width={50} height={50} />
-              <span className="ml-2">{content[language].shorttitle}</span>
+              <span className="ml-2 font-bold">{content[language].shorttitle}</span>
           </Typography>
         </Link>
         <Box
@@ -64,5 +65,7 @@ export default function NavBar() {
         </Box>
       </Toolbar>
     </AppBar>
+    </div>
+    
   );
 }

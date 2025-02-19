@@ -11,8 +11,8 @@ export default function Home() {
 
   return (
     <div>
-      <div className="flex flex-col sm:flex-row align-start items-center justify-center sm:h-auto h-screen lg:p-40 md:p-20 p-10">
-        <div className="flex flex-col text-center sm:text-left gap-5 pt-60 sm:pt-0">
+      <div className="flex flex-col sm:flex-row align-start items-center justify-center lg:p-40 md:p-20 p-10 xl:gap-20 gap-0">
+        <div className="flex flex-col text-center sm:text-left gap-5">
           <h1 className="lg:text-5xl md:text-4xl sm:text-3xl text-2xl font-bold">
           {content[language].title}
           </h1>
@@ -20,7 +20,7 @@ export default function Home() {
           {content[language].description}
           </p>
         </div>
-        <Image className="sm:scale-100 scale-50 sm:-translate-y-0 -translate-y-20" src="/logo.png" alt="Logo" width={500} height={500} />
+        <Image className="sm:scale-100 scale-50 sm:-translate-y-0 -translate-y-20 mt-10 sm:mt-0" src="/logo.png" alt="Logo" width={500} height={500} />
       </div>
       <EventCards />
     </div>

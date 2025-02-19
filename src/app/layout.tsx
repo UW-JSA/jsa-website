@@ -4,7 +4,7 @@ import NavBar from "@/components/NavBar";
 import ScrollTop from "@/components/ScrollTop";
 import "./globals.css";
 import { Fab, Toolbar } from "@mui/material";
-import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { DM_Sans } from "next/font/google";
 
 export const metadata: Metadata = {
@@ -18,11 +18,15 @@ const dmSans = DM_Sans({
   weight: ["400", "500", "700"],
 });
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html>
       <body className={`${dmSans.className} antialiased`}>
-      <ThemeProvider>
+        <ThemeProvider>
           <NavBar />
           <Toolbar id="back-to-top-anchor" />
           {children}
@@ -31,12 +35,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               size="small"
               aria-label="scroll back to top"
               sx={{
-                backgroundColor: 'transparent',
-                border: '1px solid black',
-                color: 'black',
-                transition: 'background-color 0.3s, color 0.3s',
-                '&:hover': {
-                  backgroundColor: 'white',
+                backgroundColor: "transparent",
+                border: "1px solid black",
+                color: "black",
+                transition: "background-color 0.3s, color 0.3s",
+                "&:hover": {
+                  backgroundColor: "white",
                 },
               }}
             >

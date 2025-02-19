@@ -1,4 +1,6 @@
+'use client';
 import Image from "next/image";
+import EventCards from "@/components/EventCards";
 
 export default function Home() {
   return (
@@ -10,6 +12,7 @@ export default function Home() {
       </div>
       <Image src="/logo.png" alt="Logo" width={500} height={500}/>
     </div>
+    <EventCards/>
     </div>
     
   );

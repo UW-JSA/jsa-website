@@ -35,6 +35,8 @@ export default function RootLayout({
               size="small"
               aria-label="scroll back to top"
               sx={{
+                width: { xs: 40, md: 50 },
+                height: { xs: 40, md: 50 },
                 backgroundColor: "transparent",
                 border: "1px solid black",
                 color: "black",
@@ -44,7 +46,7 @@ export default function RootLayout({
                 },
               }}
             >
-              <KeyboardArrowUpIcon />
+              <KeyboardArrowUpIcon sx={{ fontSize: { xs: 22, md: 28 } }} />
             </Fab>
           </ScrollTop>
         </ThemeProvider>

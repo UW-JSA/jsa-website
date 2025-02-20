@@ -1,7 +1,5 @@
 "use client";
 
-import content from "@/context/content";
-import { useTheme } from "@/context/ThemeContext";
 import TeamGrid from "@/components/TeamGrid";
 
 export default function Team() {

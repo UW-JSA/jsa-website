@@ -27,23 +27,29 @@ export default function NavBar() {
   });
 
   return (
-    <div> 
-      <AppBar position="fixed" style={{ backgroundColor: "var(--background)" }} className={`${dmSans.className} antialiased`}>
+    <AppBar
+      position="fixed"
+      elevation={0}
+      color="transparent"
+      className={`${dmSans.className} antialiased`}
+    >
       <Toolbar className="flex justify-between items-center">
         <div className="flex flex-row items-center gap-3">
           <Link href="/" className="flex items-center no-underline">
-          <Typography variant="h6" className="flex items-center text-gray-900">
-            <Image src="/logo.webp" alt="logo" width={50} height={50} />
-              <span className="ml-2 font-bold">{content[language].shorttitle}</span>
-          </Typography>
-        </Link>
-        <Link href="/team" className="flex items-center no-underline">
-          <Typography variant="h6" className="flex items-center text-gray-900">
-              <span className="ml-2 text-sm">Team</span>
-          </Typography>
-        </Link>
+            <Typography
+              variant="h6"
+              className="flex items-center text-gray-900"
+            >
+              <Image src="/logo.webp" alt="logo" width={50} height={50} />
+              {!trigger && (
+                <span className="ml-2 font-bold">
+                  {content[language].shorttitle}
+                </span>
+              )}
+            </Typography>
+          </Link>
         </div>
-        
+
         <Box
           className={`flex items-center gap-3 rounded-full px-4 py-1 transition-colors duration-300 ${
             trigger
@@ -51,6 +57,14 @@ export default function NavBar() {
               : "bg-transparent"
           }`}
         >
+          <Link href="/team" className="flex items-center no-underline">
+            <Typography
+              variant="h6"
+              className="flex items-center text-gray-900"
+            >
+              <span className="ml-2 text-sm">Team</span>
+            </Typography>
+          </Link>
           <button
             onClick={toggleLanguage}
             className="flex items-center py-2 px-2 text-gray-800 text-lg capitalize"
@@ -73,7 +87,5 @@ export default function NavBar() {
         </Box>
       </Toolbar>
     </AppBar>
-    </div>
-    
   );
 }

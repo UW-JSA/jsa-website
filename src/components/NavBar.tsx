@@ -30,7 +30,9 @@ export default function NavBar() {
     <AppBar
       position="fixed"
       elevation={0}
-      color="transparent"
+      sx={{
+        backgroundColor: "#ffffe9",
+        boxShadow:"0px 4px 6px rgba(0, 0, 0, 0.05)"}}
       className={`${dmSans.className} antialiased`}
     >
       <Toolbar className="flex justify-between items-center">
@@ -41,21 +43,17 @@ export default function NavBar() {
               className="flex items-center text-gray-900"
             >
               <Image src="/logo.png" alt="logo" width={50} height={50} />
-              {!trigger && (
+
                 <span className="ml-2 font-bold">
                   {content[language].shorttitle}
                 </span>
-              )}
+              
             </Typography>
           </Link>
         </div>
 
         <Box
-          className={`flex items-center gap-3 rounded-full px-4 py-1 transition-colors duration-300 ${
-            trigger
-              ? "bg-[#FFFFEE] backdrop-brightness-90 backdrop-blur-lg"
-              : "bg-transparent"
-          }`}
+          className={'flex items-center gap-5 rounded-full px-4 py-1 transition-colors duration-300'}
         >
           <Link href="/team" className="flex items-center no-underline">
             <Typography

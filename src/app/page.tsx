@@ -26,7 +26,6 @@ export default function Home() {
           width={300}
           height={300}
         />
-
       </div>
       <EventCards />
     </div>

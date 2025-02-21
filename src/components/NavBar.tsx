@@ -21,10 +21,10 @@ const dmSans = DM_Sans({
 
 export default function NavBar() {
   const { language, toggleLanguage } = useTheme();
-  const trigger = useScrollTrigger({
-    disableHysteresis: true,
-    threshold: 0,
-  });
+  // const trigger = useScrollTrigger({
+  //   disableHysteresis: true,
+  //   threshold: 0,
+  // });
 
   return (
     <AppBar

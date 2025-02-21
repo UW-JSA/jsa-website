@@ -20,12 +20,13 @@ export default function Home() {
           </p>
         </div>
         <Image
-          className="sm:scale-100 scale-50 sm:-translate-y-0 -translate-y-20 mt-10 sm:mt-0"
+          className="scale-75 sm:scale-100 sm:translate-y-0"
           src="/logo.png"
           alt="Logo"
-          width={500}
-          height={500}
+          width={300}
+          height={300}
         />
+
       </div>
       <EventCards />
     </div>

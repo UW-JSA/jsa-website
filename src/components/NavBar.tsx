@@ -40,7 +40,7 @@ export default function NavBar() {
               variant="h6"
               className="flex items-center text-gray-900"
             >
-              <Image src="/logo.webp" alt="logo" width={50} height={50} />
+              <Image src="/logo.png" alt="logo" width={50} height={50} />
               {!trigger && (
                 <span className="ml-2 font-bold">
                   {content[language].shorttitle}

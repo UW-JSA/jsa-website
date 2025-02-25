@@ -4,8 +4,36 @@ export const events: EventItem[] = [
   {
     id: 1,
     title: {
-      en: "Summer Festival",
+      en: "Summer Festival 1",
       ja: "夏祭り (Natsu Matsuri)",
+    },
+    description: {
+      en: "A traditional summer festival event.",
+      ja: "伝統的な夏祭りイベントです。",
+    },
+    start_time: "2026-01-12T18:00:00",
+    end_time: "2026-01-12T19:30:00",
+    link: "/",
+  },
+  {
+    id: 10,
+    title: {
+      en: "Summer Festival 2",
+      ja: "夏祭り2 (Natsu Matsuri)",
+    },
+    description: {
+      en: "A traditional summer festival event.",
+      ja: "伝統的な夏祭りイベントです。",
+    },
+    start_time: "2026-01-12T18:00:00",
+    end_time: "2026-01-12T19:30:00",
+    link: "/",
+  },
+  {
+    id: 11,
+    title: {
+      en: "Summer Festival 3",
+      ja: "夏祭り3 (Natsu Matsuri)",
     },
     description: {
       en: "A traditional summer festival event.",
@@ -59,6 +87,62 @@ export const events: EventItem[] = [
   },
   {
     id: 5,
+    title: {
+      en: "Tea Ceremony Experience",
+      ja: "茶道体験 (Tea Ceremony Experience)",
+    },
+    description: {
+      en: "Learn about the traditional Japanese tea ceremony.",
+      ja: "伝統的な茶道の世界を体験。",
+    },
+    start_time: "2021-01-12T18:00:00",
+    end_time: "2021-01-12T19:30:00",
+    link: "/",
+  },
+  {
+    id: 6,
+    title: {
+      en: "Martial Arts Demo",
+      ja: "武道デモ (Martial Arts Demo)",
+    },
+    description: {
+      en: "Watch a demonstration of Japanese martial arts.",
+      ja: "日本の武道を披露するデモンストレーション。",
+    },
+    start_time: "2021-01-12T18:00:00",
+    end_time: "2021-01-12T19:30:00",
+    link: "/",
+  },
+  {
+    id: 7,
+    title: {
+      en: "Tea Ceremony Experience",
+      ja: "茶道体験 (Tea Ceremony Experience)",
+    },
+    description: {
+      en: "Learn about the traditional Japanese tea ceremony.",
+      ja: "伝統的な茶道の世界を体験。",
+    },
+    start_time: "2021-01-12T18:00:00",
+    end_time: "2021-01-12T19:30:00",
+    link: "/",
+  },
+  {
+    id: 8,
+    title: {
+      en: "Martial Arts Demo",
+      ja: "武道デモ (Martial Arts Demo)",
+    },
+    description: {
+      en: "Watch a demonstration of Japanese martial arts.",
+      ja: "日本の武道を披露するデモンストレーション。",
+    },
+    start_time: "2021-01-12T18:00:00",
+    end_time: "2021-01-12T19:30:00",
+    link: "/",
+  },
+  {
+    id: 9,
     title: {
       en: "Tea Ceremony Experience",
       ja: "茶道体験 (Tea Ceremony Experience)",

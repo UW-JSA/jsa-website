@@ -3,7 +3,9 @@
 import Image from "next/image";
 import content from "@/context/content";
 import { useTheme } from "@/context/ThemeContext";
-import EventCards from "@/components/EventCards";
+import SponsorSection from "@/components/SponsorSection";
+import PastEvents from "@/components/PastEvents";
+import UpcomingEvents from "@/components/UpcomingEvents";
 
 export default function Home() {
   const { language } = useTheme();
@@ -27,7 +29,9 @@ export default function Home() {
           height={300}
         />
       </div>
-      <EventCards />
+      <SponsorSection />
+      <UpcomingEvents />
+      <PastEvents />
     </div>
   );
 }

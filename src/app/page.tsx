@@ -8,18 +8,17 @@ import { useTheme } from "@/context/ThemeContext";
 import SponsorSection from "@/components/SponsorSection";
 import PastEvents from "@/components/PastEvents";
 import UpcomingEvents from "@/components/UpcomingEvents";
-import EventCards from "@/components/EventCards";
 import AuthModalWrapper from "@/components/AuthModalWrapper";
 
 export default function Home() {
   const { language } = useTheme();
   // Control whether to show the authentication modal
-  const [showAuth, setShowAuth] = useState(true);
+  // const [showAuth, setShowAuth] = useState(true);
 
   return (
     <div>
       {/* Render the authentication modal if showAuth is true */}
-      {showAuth && <AuthModalWrapper />}
+      <AuthModalWrapper />
 
       <div className="flex flex-col sm:flex-row items-center justify-center lg:p-40 md:p-20 p-10 xl:gap-20 gap-0">
         <div className="flex flex-col text-center sm:text-left gap-5">

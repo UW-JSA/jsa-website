@@ -1,7 +1,7 @@
 // app/page.tsx
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import content from "@/context/content";
 import { useTheme } from "@/context/ThemeContext";

@@ -1,12 +1,7 @@
-'use client';
-import React, { useState } from 'react';
-import dynamic from 'next/dynamic';
-import {
-  AppBar,
-  Toolbar,
-  Typography,
-  Box,
-} from "@mui/material";
+"use client";
+import React, { useState } from "react";
+import dynamic from "next/dynamic";
+import { AppBar, Toolbar, Typography, Box } from "@mui/material";
 import Link from "next/link";
 import Image from "next/image";
 import { useTheme } from "@/context/ThemeContext";
@@ -20,7 +15,7 @@ const dmSans = DM_Sans({
 });
 
 // Dynamically import LoginModal to avoid SSR issues
-const LoginModal = dynamic(() => import('./LoginModal'), { ssr: false });
+const LoginModal = dynamic(() => import("./LoginModal"), { ssr: false });
 
 export default function NavBar() {
   const { language, toggleLanguage } = useTheme();
@@ -44,16 +39,24 @@ export default function NavBar() {
         <Toolbar className="flex justify-between items-center">
           <div className="flex flex-row items-center gap-3">
             <Link href="/" className="flex items-center no-underline">
-              <Typography variant="h6" className="flex items-center text-gray-900">
+              <Typography
+                variant="h6"
+                className="flex items-center text-gray-900"
+              >
                 <Image src="/logo.png" alt="logo" width={50} height={50} />
-                <span className="ml-2 font-bold">{content[language].shorttitle}</span>
+                <span className="ml-2 font-bold">
+                  {content[language].shorttitle}
+                </span>
               </Typography>
             </Link>
           </div>
 
           <Box className="flex items-center gap-5 rounded-full px-4 py-1 transition-colors duration-300">
             <Link href="/team" className="flex items-center no-underline">
-              <Typography variant="h6" className="flex items-center text-gray-900">
+              <Typography
+                variant="h6"
+                className="flex items-center text-gray-900"
+              >
                 <span className="ml-2 text-sm">Team</span>
               </Typography>
             </Link>
@@ -61,11 +64,15 @@ export default function NavBar() {
               onClick={toggleLanguage}
               className="flex items-center py-2 px-2 text-gray-800 text-lg capitalize"
             >
-              <span className={`${language === "ja" ? "font-bold" : "font-thin"}`}>
+              <span
+                className={`${language === "ja" ? "font-bold" : "font-thin"}`}
+              >
                 JA
               </span>
               <span className="mx-2">|</span>
-              <span className={`${language === "en" ? "font-bold" : "font-thin"}`}>
+              <span
+                className={`${language === "en" ? "font-bold" : "font-thin"}`}
+              >
                 EN
               </span>
             </button>

@@ -80,11 +80,9 @@ export default async function handler(
     console.log("Mail Options:", mailOptions); // check if the mail options are correct
     await transporter.sendMail(mailOptions);
 
-    res
-      .status(200)
-      .json({
-        message: "User registered successfully. Confirmation email sent.",
-      });
+    res.status(200).json({
+      message: "User registered successfully. Confirmation email sent.",
+    });
   } catch (error) {
     console.error("Registration error:", error);
     res.status(500).json({ message: "Internal server error." });

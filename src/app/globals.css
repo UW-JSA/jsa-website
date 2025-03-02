@@ -12,3 +12,11 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.bg-gradient-primary {
+  background: linear-gradient(45deg, #fe6b8b 30%, #ff8e53 90%);
+}
+
+.bg-gradient-secondary {
+  background: linear-gradient(45deg, #2196f3 30%, #21cbf3 90%);
+}

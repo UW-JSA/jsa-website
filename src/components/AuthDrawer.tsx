@@ -42,6 +42,18 @@ const AuthDrawer: React.FC<AuthDrawerProps> = ({ open, onClose }) => {
     else onClose();
   };
 
+  const getURL = () => {
+    let url =
+      process?.env?.NEXT_PUBLIC_REDIRECT_URL ??
+      process?.env?.NEXT_PUBLIC_VERCEL_URL ??
+      'http://localhost:3000/'
+    // Make sure to include `https://` when not localhost.
+    url = url.startsWith('http') ? url : `https://${url}`
+    // Make sure to include a trailing `/`.
+    url = url.endsWith('/') ? url : `${url}/`
+    return url
+  }
+
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
     if (firstName.trim() === "" || lastName.trim() === "") {
@@ -51,14 +63,17 @@ const AuthDrawer: React.FC<AuthDrawerProps> = ({ open, onClose }) => {
     const { error } = await supabase.auth.signUp({
       email,
       password,
-      options: { data: { first_name: firstName, last_name: lastName } },
+      options: {
+        data: { first_name: firstName, last_name: lastName },
+        emailRedirectTo: getURL(),
+      },
     });
     if (error) setErrorMsg(error.message);
     else
       setMessage(
-        "Registration successful! Please check your email to verify your account.",
+        "Registration successful! Please check your email to verify your account."
       );
-  };
+  };  
 
   return (
     <Drawer

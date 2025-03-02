@@ -40,16 +40,19 @@ export default function PastEvents() {
     }
   };
 
-  const scrollToIndex = useCallback((index: number) => {
-    if (sliderRef.current) {
-      const cardWidth = sliderRef.current.clientWidth / visibleCount;
-      sliderRef.current.scrollTo({
-        left: index * cardWidth,
-        behavior: "smooth",
-      });
-      setActiveIndex(index);
-    }
-  }, [visibleCount]);
+  const scrollToIndex = useCallback(
+    (index: number) => {
+      if (sliderRef.current) {
+        const cardWidth = sliderRef.current.clientWidth / visibleCount;
+        sliderRef.current.scrollTo({
+          left: index * cardWidth,
+          behavior: "smooth",
+        });
+        setActiveIndex(index);
+      }
+    },
+    [visibleCount],
+  );
 
   useEffect(() => {
     if (activeIndex < pastEvents.length - visibleCount) {

@@ -5,8 +5,9 @@ import React, { useState } from "react";
 
 type LoginModalProps = {
   onClose: () => void;
-  onRegisterClick: () => void;
+  onRegisterClick?: () => void;
 };
+
 
 const LoginModal: React.FC<LoginModalProps> = ({
   onClose,

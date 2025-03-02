@@ -66,7 +66,12 @@ const AuthDrawer: React.FC<AuthDrawerProps> = ({ open, onClose }) => {
       open={open}
       onClose={onClose}
       PaperProps={{
-        style: { width: window.innerWidth < 600 ? "100%" : 400 },
+        style: {
+          width:
+            typeof window !== "undefined" && window.innerWidth < 600
+              ? "100%"
+              : 400,
+        },
       }}
     >
       <Box p={3} position="relative" height="100%">

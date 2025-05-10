@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/context/ThemeContext";
-import NavBar from "@/components/NavBar";
 import ScrollTop from "@/components/ScrollTop";
 import "./globals.css";
 import { Fab, Toolbar } from "@mui/material";
@@ -27,7 +26,6 @@ export default function RootLayout({
     <html>
       <body className={`${dmSans.className} antialiased`}>
         <ThemeProvider>
-          <NavBar />
           <Toolbar id="back-to-top-anchor" />
           {children}
           <ScrollTop>
